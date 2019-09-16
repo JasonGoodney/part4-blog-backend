@@ -39,6 +39,10 @@ describe('blogs api', () => {
 
     await api
       .post('/api/blogs')
+      .set(
+        'Authorization',
+        'bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJhZERhZCIsImlkIjoiNWQ3ZTUzMWFhYTcwZGQzNzFlY2E0YWQ4IiwiaWF0IjoxNTY4NTU5OTI4fQ._AmNbydBJSF6RQ4KRA6sZkn4i1wuJtVs9KrWY6R535g'
+      )
       .send(newBlog)
       .expect(200)
       .expect('Content-Type', /application\/json/)
@@ -57,6 +61,10 @@ describe('blogs api', () => {
 
     await api
       .post('/api/blogs')
+      .set(
+        'Authorization',
+        'bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJhZERhZCIsImlkIjoiNWQ3ZTUzMWFhYTcwZGQzNzFlY2E0YWQ4IiwiaWF0IjoxNTY4NTU5OTI4fQ._AmNbydBJSF6RQ4KRA6sZkn4i1wuJtVs9KrWY6R535g'
+      )
       .send(newBlog)
       .expect(400)
 
@@ -131,7 +139,7 @@ describe('most', () => {
       likes: 12,
       __v: 0
     }
-    expect(helper.favoriteBlog(blogs)).toEqual(blog)
+    expect(helper.favoriteBlog(helper.initialBlogs)).toEqual(blog)
   })
 
   test('of the author with the most blogs', () => {

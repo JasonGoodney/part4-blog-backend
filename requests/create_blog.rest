@@ -1,8 +1,9 @@
 POST http://localhost:3003/api/blogs
 content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVseXNldyIsImlkIjoiNWQ3ZmQwN2MyZWM0ZTc5MTdiYzRjNDliIiwiaWF0IjoxNTY4NjU4NjY0fQ.YwVCLqrYROsIM8K_IzUGHskw8ZMDBoCZiF3ffCEUJUk
 
 {
-	
-	"author": "beefcake",
-	"url": "lemonycakies.com/blog/twix"
+	"title": "how to funniest at funhaus",
+	"author": "elyse",
+	"url": "hollycat.com"
 }
